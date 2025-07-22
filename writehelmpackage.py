@@ -92,8 +92,8 @@ def process_json_file(file_path, outputPath):
 
 if __name__ == "__main__":
     if len(sys.argv) < 2:
-        print("用法: python your_script_name.py <json_file_path>")
-        print("示例: python your_script_name.py data.json")
+        print("用法: python your_script_name.py <json_file_path> <output_path>")
+        print("示例: python your_script_name.py data.json /opt/log")
     else:
         json_file = sys.argv[1]
         outputPath = sys.argv[2]
