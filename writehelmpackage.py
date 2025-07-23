@@ -37,14 +37,6 @@ def process_json_file(file_path, outputPath):
                         yaml.dump(values, file, default_flow_style=False, sort_keys=False)
                 except IOError as e:
                     print(f"追加内容到文件时发生错误: {e}")
-            if "values" in chart_data and isinstance(chart_data, dict):
-                values = chart_data["values"]
-                file_name_append = path + "/values.yaml"
-                try:
-                    with open(file_name_append, "a", encoding="utf-8") as file:
-                        yaml.dump(values, file, default_flow_style=False, sort_keys=False)
-                except IOError as e:
-                    print(f"追加内容到文件时发生错误: {e}")
             if "files" in chart_data and isinstance(chart_data, dict):
                 files = chart_data["files"]
                 for file_info in files:
