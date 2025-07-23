@@ -91,7 +91,7 @@ def process_json_file(file_path, outputPath):
         print(f"发生了一个意外错误: {e}")
 
 if __name__ == "__main__":
-    if len(sys.argv) < 2:
+    if not len(sys.argv) == 3:
         print("用法: python writehelmpackage.py <json_file_path> <output_path>")
         print("示例: python writehelmpackage.py data.json /opt/log")
     else:
